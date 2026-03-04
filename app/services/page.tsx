@@ -17,7 +17,7 @@ export default function GeospatialServicesPage() {
       title: 'Volumetric Analysis & Cut/Fill',
       description: 'Precise quantitative measurements for earthwork operations. Calculate stockpile volumes, track borrow pit depletion, and verify subcontractor grading.',
       icon: Database,
-      img: 'https://images.unsplash.com/photo-1541888087405-ebcf7c186064?auto=format&fit=crop&q=80',
+      img: '/aggregate_piles.jpeg',
       features: ['Automated stockpile inventory', 'Design vs. As-Built comparisons', 'Multi-temporal progress tracking'],
     },
     {

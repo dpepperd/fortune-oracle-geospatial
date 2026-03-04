@@ -8,34 +8,34 @@ export default function GeospatialHomePage() {
       title: 'Topographic Mapping',
       description: 'Centimeter-grade DSMs and DTMs for precise site planning and engineering.',
       icon: Map,
-      bgImage: 'https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&q=80',
+      bgImage: '/residential_progress.jpeg',
     },
     {
       title: 'Volumetric Analysis',
       description: 'Accurate cut-and-fill calculations and stockpile measurements for progress monitoring.',
       icon: BarChart3,
-      bgImage: 'https://images.unsplash.com/photo-1541888087405-ebcf7c186064?auto=format&fit=crop&q=80',
+      bgImage: '/aggregate_piles.jpeg',
     },
     {
       title: 'High-Resolution Orthomosaics',
       description: 'Georeferenced aerial imagery providing absolute ground truth for large developments.',
       icon: Layers,
-      bgImage: 'https://images.unsplash.com/photo-1596484552834-6a58f840fd93?auto=format&fit=crop&q=80',
+      bgImage: '/closing_shot.jpeg',
     },
   ];
 
   const workflowSteps = [
-    { icon: Plane, label: 'Drone Capture', desc: 'Pre-programmed flight paths over target site' },
-    { icon: Map, label: 'Orthomosaic Map', desc: 'Stitching high-res 2D visual maps' },
-    { icon: Layers, label: 'Elevation Model', desc: 'Generating 3D surface and terrain meshes' },
-    { icon: Database, label: 'Volume Analysis', desc: 'Exporting CAD-ready analytical data' },
+    { icon: Plane, label: 'Drone Capture', desc: 'Pre-programmed flight paths over target site', img: '/drone_operator.jpeg' },
+    { icon: Map, label: 'Orthomosaic Map', desc: 'Stitching high-res 2D visual maps', img: '/orthomosaic_map.jpeg' },
+    { icon: Layers, label: 'Elevation Model', desc: 'Generating 3D surface and terrain meshes', img: '/elevation_heat_map.jpeg' },
+    { icon: Database, label: 'Volume Analysis', desc: 'Exporting CAD-ready analytical data', img: '/aggregate_piles.jpeg' },
   ];
 
   const results = [
     {
       title: "Orthomosaic Map",
       desc: "High-resolution, distortion-free 2D maps. Used by developers for situational awareness, site boundaries, and progress tracking.",
-      img: "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80"
+      img: "/orthomosaic_map.jpeg"
     },
     {
       title: "Digital Surface Model (DSM)",
@@ -136,7 +136,10 @@ export default function GeospatialHomePage() {
                 
                 {/* Visual Placeholder Graphic mapping */}
                 <div className="mt-6 w-full h-24 bg-slate-800/50 rounded-lg border border-slate-700 overflow-hidden relative">
-                  <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80')] bg-cover bg-center" />
+                  <div 
+                    className="absolute inset-0 opacity-40 bg-cover bg-center" 
+                    style={{ backgroundImage: `url(${step.img})` }} 
+                  />
                 </div>
               </div>
             ))}

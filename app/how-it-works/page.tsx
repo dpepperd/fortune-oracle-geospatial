@@ -15,7 +15,7 @@ export default function GeospatialProcessPage() {
       title: 'Ground Control & Data Capture',
       description: 'Using RTK positioning and GNSS survey control, aerial imagery is captured across the site using structured flight missions designed for photogrammetry reconstruction.',
       details: ['RTK/PPK Positioning', 'GCP Deployment (if needed)', 'Automated Capture'],
-      image: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80',
+      image: '/drone_operator.jpeg',
     },
     {
       number: '03',

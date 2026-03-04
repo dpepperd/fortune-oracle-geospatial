@@ -9,7 +9,7 @@ export default function GeospatialServicesPage() {
       title: 'High-Resolution Topographic Mapping',
       description: 'Centimeter-grade Digital Terrain Models (DTM) and Digital Surface Models (DSM) essential for initial site planning, grading, and hydrology analysis.',
       icon: MapIcon,
-      img: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80',
+      img: '/digital_surface_model.jpeg',
       features: ['1-3cm absolute accuracy', 'Vegetation penetration (via LiDAR, available upon request)', 'Contour generation at 1ft intervals'],
     },
     {

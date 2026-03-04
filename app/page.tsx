@@ -40,12 +40,12 @@ export default function GeospatialHomePage() {
     {
       title: "Digital Surface Model (DSM)",
       desc: "3D representation mapping both the terrain and all surface objects. Crucial for line-of-sight and hydrology planning.",
-      img: "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80"
+      img: "/digital_surface_model.jpeg"
     },
     {
       title: "Contour Overlay",
       desc: "1ft and 2ft topographic lines mapped directly over orthomosaics. Exported to DWG for immediate use by civil engineers.",
-      img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
+      img: "/contour_map.jpeg"
     }
   ];
 

@@ -1,0 +1,54 @@
+
+> fortune_oracle_geospatial@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./app/components/GeospatialChatWidget.tsx:4:1
+Module not found: Can't resolve './ChatWidget.module.css'
+  2 |
+  3 | import { useState, useRef, useEffect } from 'react';
+> 4 | import styles from './ChatWidget.module.css';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | interface Message {
+  6 |   id: string;
+  7 |   text: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/components/GeospatialChatWidget.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./app/components/GeospatialChatWidget.tsx:4:1
+Module not found: Can't resolve './ChatWidget.module.css'
+  2 |
+  3 | import { useState, useRef, useEffect } from 'react';
+> 4 | import styles from './ChatWidget.module.css';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | interface Message {
+  7 |   id: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/components/GeospatialChatWidget.tsx
+    ./app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./app/components/GeospatialChatWidget.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./app/components/GeospatialChatWidget.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

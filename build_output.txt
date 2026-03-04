@@ -1,0 +1,27 @@
+
+> fortune_oracle_geospatial@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./app/layout.tsx:3:1
+Module not found: Can't resolve '../components/GeospatialChatWidget'
+  1 | import type { Metadata } from 'next';
+  2 | import Link from 'next/link';
+> 3 | import GeospatialChatWidget from '../components/GeospatialChatWidget';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: 'Fortune Oracle Geospatial | High-Accuracy Terrain Intelligence',
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./app/layout.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

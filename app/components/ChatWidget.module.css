@@ -1,0 +1,322 @@
+.container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Mobile Safari fixes */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.bubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  /* Mobile Safari touch improvements */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.bubble:active {
+  transform: scale(0.95);
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.6);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.window {
+  width: 380px;
+  height: 600px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* Mobile Safari fixes */
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.header {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+  flex-shrink: 0;
+  /* Mobile Safari touch improvements */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.close:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background: #f9fafb;
+  /* Mobile Safari scroll improvements */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.message {
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.message .bubble {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  background: none;
+  position: static;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.message.user .bubble {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot .bubble {
+  background: white;
+  color: #1f2937;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.typing {
+  display: flex;
+  gap: 4px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  width: fit-content;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.typing span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9ca3af;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+.inputArea {
+  padding: 16px 20px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  font-size: 16px; /* Prevents zoom on iOS */
+  outline: none;
+  transition: border-color 0.2s;
+  /* Mobile Safari improvements */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.input:focus {
+  border-color: #6366f1;
+}
+
+.input:disabled {
+  background: #f9fafb;
+  cursor: not-allowed;
+}
+
+.send {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+  /* Mobile Safari touch improvements */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.send:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.send:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .window {
+    /* Use viewport-aware dimensions on mobile */
+    width: calc(100vw - 40px);
+    max-width: 380px;
+    height: calc(100vh - 140px);
+    max-height: 600px;
+    /* Keep it relative to the fixed container - don't set position fixed again */
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    left: auto;
+  }
+  
+  .container {
+    bottom: 20px;
+    right: 20px;
+    /* Ensure container has dimensions on mobile */
+    width: auto;
+    height: auto;
+  }
+  
+  /* Make input larger on mobile */
+  .input {
+    font-size: 16px; /* Prevents iOS zoom */
+    padding: 14px 16px;
+  }
+  
+  /* Larger touch targets */
+  .bubble {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .send {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .close {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 896px) and (orientation: landscape) {
+  .window {
+    height: calc(100vh - 100px);
+    max-height: 500px;
+  }
+}

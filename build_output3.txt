@@ -1,0 +1,32 @@
+
+> fortune_oracle_geospatial@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 2.2s
+  Running TypeScript ...
+  Collecting page data using 23 workers ...
+  Generating static pages using 23 workers (0/11) ...
+  Generating static pages using 23 workers (2/11) 
+  Generating static pages using 23 workers (5/11) 
+  Generating static pages using 23 workers (8/11) 
+Γ£ô Generating static pages using 23 workers (11/11) in 840.4ms
+  Finalizing page optimization ...
+
+Route (app)
+Γöî Γùï /
+Γö£ Γùï /_not-found
+Γö£ Γùï /about
+Γö£ Γùï /contact
+Γö£ Γùï /how-it-works
+Γö£ Γùï /privacy
+Γö£ Γùï /projects
+Γö£ Γùï /services
+Γö£ Γùï /technology
+Γöö Γùï /terms
+
+
+Γùï  (Static)  prerendered as static content
+

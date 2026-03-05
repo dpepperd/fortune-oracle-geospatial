@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import GeospatialChatWidget from './components/GeospatialChatWidget';
 import './globals.css';
 
@@ -18,8 +19,15 @@ export default function GeospatialLayout({
       <body className="min-h-screen bg-slate-950 text-slate-200">
         <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-              <span className="text-purple-500">♦</span> Fortune Oracle <span className="text-slate-400 font-normal">Geospatial</span>
+            <Link href="/" className="flex items-center gap-2">
+              <Image 
+                src="/fog_logo_horizontal.png" 
+                alt="Fortune Oracle Geospatial" 
+                width={200} 
+                height={50} 
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </Link>
             <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
               <Link href="/services" className="hover:text-white transition-colors">Services</Link>

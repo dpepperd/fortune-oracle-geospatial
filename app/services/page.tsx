@@ -26,7 +26,7 @@ export default function GeospatialServicesPage() {
       description: 'Distortion-free, high-resolution aerial imagery mapped directly to your project coordinate system for verifiable, up-to-date visual records.',
       icon: Layers,
       img: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80',
-      features: ['GSD down to 1cm/pixel', 'Seamless integration into GIS software', 'Time-stamped visual historical record'],
+      features: ['Ground sampling distance (GSD) as fine as 1–2 cm/pixel', 'Seamless integration into GIS software', 'Time-stamped visual historical record'],
     },
     {
       id: 'inspections',

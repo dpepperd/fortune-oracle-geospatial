@@ -21,11 +21,11 @@ export default function GeospatialLayout({
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <Image 
-                src="/fog_logo_horizontal.png" 
+                src="/fog_logo_horizontal_light.png" 
                 alt="Fortune Oracle Geospatial" 
-                width={200} 
-                height={50} 
-                className="h-10 w-auto object-contain brightness-0 invert opacity-90"
+                width={280} 
+                height={70} 
+                className="h-14 w-auto object-contain"
                 priority
               />
             </Link>

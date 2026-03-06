@@ -18,14 +18,14 @@ export default function GeospatialLayout({
     <html lang="en">
       <body className="min-h-screen bg-slate-950 text-slate-200">
         <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-          <div className="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
+          <div className="max-w-6xl mx-auto px-6 h-32 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <Image 
                 src="/fog_logo_horizontal_light.png" 
                 alt="Fortune Oracle Geospatial" 
-                width={400} 
-                height={100} 
-                className="h-20 w-auto object-contain"
+                width={533} 
+                height={133} 
+                className="h-28 w-auto object-contain"
                 priority
               />
             </Link>

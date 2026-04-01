@@ -5,7 +5,11 @@ import GeospatialChatWidget from './components/GeospatialChatWidget';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Fortune Oracle Geospatial | High-Accuracy Terrain Intelligence',
+  metadataBase: new URL('https://www.fortuneoraclegeospatial.com'),
+  title: {
+    default: 'Fortune Oracle Geospatial | High-Accuracy Terrain Intelligence',
+    template: '%s | Fortune Oracle Geospatial'
+  },
   description: 'High-accuracy RTK drone mapping, photogrammetry, and terrain intelligence for developers, commercial builders, and land investors.',
 };
 
@@ -20,11 +24,11 @@ export default function GeospatialLayout({
         <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
           <div className="max-w-6xl mx-auto px-6 h-32 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
-              <Image 
-                src="/fog_logo_horizontal_light.png" 
-                alt="Fortune Oracle Geospatial" 
-                width={533} 
-                height={133} 
+              <Image
+                src="/fog_logo_horizontal_light.png"
+                alt="Fortune Oracle Geospatial"
+                width={533}
+                height={133}
                 className="h-28 w-auto object-contain"
                 priority
               />

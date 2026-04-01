@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import { Plane, Database, Map as MapIcon, Layers, ChevronRight } from 'lucide-react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Mapping Process & Workflow',
+  description: 'See how we execute our data collection, photogrammetric processing, and engineering quality assurance to deliver superior terrain models.'
+};
+
 export default function GeospatialProcessPage() {
   const steps = [
     {
@@ -8,7 +15,7 @@ export default function GeospatialProcessPage() {
       title: 'Mission Planning & Scope',
       description: 'We define the mapping area, flight grid, and image overlap required to produce accurate terrain models. Airspace compliance and site constraints are verified prior to deployment.',
       details: ['Airspace Authorization', 'GSD Specification', 'Flight Vectoring'],
-      image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80',
+      image: '/contour_map.jpeg',
     },
     {
       number: '02',
@@ -22,14 +29,14 @@ export default function GeospatialProcessPage() {
       title: 'Photogrammetric Processing',
       description: 'Captured imagery is processed through photogrammetry engines to generate dense point clouds and spatial datasets aligned to survey-grade coordinates.',
       details: ['Point Cloud Generation', 'Coordinate System Alignment', 'Data Calibration'],
-      image: 'https://images.unsplash.com/photo-1541888087405-ebcf7c186064?auto=format&fit=crop&q=80',
+      image: '/digital_surface_model.jpeg',
     },
     {
       number: '04',
       title: 'Quality Assurance & Deliverables',
       description: 'Generated datasets are verified against control checkpoints and exported as orthomosaics, terrain models, and point clouds ready for CAD and GIS workflows.',
       details: ['RMSE Verification', 'Format Conversion', 'Final QA Audit'],
-      image: 'https://images.unsplash.com/photo-1596484552834-6a58f840fd93?auto=format&fit=crop&q=80',
+      image: '/elevation_heat_map.jpeg',
     }
   ];
 
@@ -87,16 +94,16 @@ export default function GeospatialProcessPage() {
             <div key={index} className="relative pl-12 md:pl-0">
               {/* Vertical Line on Desktop */}
               <div className="hidden md:block absolute top-0 bottom-[-6rem] left-1/2 w-px bg-slate-800 -translate-x-1/2 last:bottom-0" />
-              
+
               <div className={`md:flex items-center gap-12 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                
+
                 {/* Visual Graphic Area / Number */}
                 <div className="absolute left-0 top-0 md:static md:w-1/2 flex pt-2 md:pt-0">
                   <div className={`md:w-full flex items-center relative ${index % 2 !== 0 ? 'md:justify-start' : 'md:justify-end'}`}>
-                    
+
                     {/* The Visual Graphic (Hidden on mobile to preserve layout, shown on desktop) */}
                     <div className={`hidden md:block w-full max-w-sm aspect-video rounded-xl border border-slate-700 shadow-xl overflow-hidden relative ${index % 2 !== 0 ? 'ml-12' : 'mr-12'}`}>
-                      <div 
+                      <div
                         className="absolute inset-0 bg-cover bg-center opacity-80"
                         style={{ backgroundImage: `url(${step.image})` }}
                       />

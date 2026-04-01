@@ -1,10 +1,17 @@
 import Link from 'next/link';
-import { 
+import {
   Play, ArrowRight, CheckSquare,
   Map, Camera, Ruler, Mountain, Box, Share2,
   PhoneCall, BadgeCheck, ShieldAlert, ShieldCheck, Mail, MapPin
 } from 'lucide-react';
 import TrustCredentialStrip from '../components/TrustCredentialStrip';
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us | Geospatial Engineering Team',
+  description: 'Learn about Fortune Oracle Geospatial and our mission to deliver highly accurate terrain data using advanced UAVs and RTK systems.'
+};
 
 export default function GeospatialAboutPage() {
   return (
@@ -33,12 +40,12 @@ export default function GeospatialAboutPage() {
             <p className="text-sm font-semibold text-slate-300 mb-3 ml-1">Meet Dirk — Founder of Fortune Oracle Geospatial</p>
             <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 group cursor-pointer shadow-2xl">
               {/* Placeholder Thumbnail */}
-              <div 
+              <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 opacity-60"
                 style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1579820010410-c10411aaaa88?q=80&w=2697&auto=format&fit=crop")' }}
               ></div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent"></div>
-              
+
               {/* Play Button */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-16 h-16 rounded-full bg-purple-600/90 flex items-center justify-center text-white backdrop-blur-md shadow-lg group-hover:bg-purple-500 transition-colors">
@@ -95,7 +102,7 @@ export default function GeospatialAboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">What We Deliver</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Map, title: "Orthomosaic Map", desc: "High resolution aerial site map." },
@@ -185,7 +192,7 @@ export default function GeospatialAboutPage() {
             {/* Tile 1 */}
             <div className="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden flex flex-col">
               <div className="h-48 bg-slate-800 relative">
-                 <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1610444654924-42fbc94ebfb8?q=80&w=1200&auto=format&fit=crop")' }}></div>
+                <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1610444654924-42fbc94ebfb8?q=80&w=1200&auto=format&fit=crop")' }}></div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-white mb-4">Residential Lot Mapping</h3>
@@ -203,7 +210,7 @@ export default function GeospatialAboutPage() {
             {/* Tile 2 */}
             <div className="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden flex flex-col">
               <div className="h-48 bg-slate-800 relative">
-                 <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1541888045958-37c22e434316?q=80&w=1200&auto=format&fit=crop")' }}></div>
+                <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1541888045958-37c22e434316?q=80&w=1200&auto=format&fit=crop")' }}></div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-white mb-4">Commercial Site Progress Tracking</h3>
@@ -221,7 +228,7 @@ export default function GeospatialAboutPage() {
             {/* Tile 3 */}
             <div className="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden flex flex-col">
               <div className="h-48 bg-slate-800 relative">
-                 <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1582260654716-e578f2445b23?q=80&w=1200&auto=format&fit=crop")' }}></div>
+                <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1582260654716-e578f2445b23?q=80&w=1200&auto=format&fit=crop")' }}></div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-white mb-4">Grading / Drainage Visualization</h3>
@@ -236,7 +243,7 @@ export default function GeospatialAboutPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center mt-12 bg-slate-950/50 p-6 rounded-lg border border-slate-800/50">
             <p className="text-sm text-slate-400 max-w-4xl mx-auto leading-relaxed">
               Fortune Oracle Geospatial provides aerial mapping and visual documentation services and is not a licensed surveyor. Outputs are for planning and visualization unless a licensed survey workflow is engaged.
@@ -250,13 +257,13 @@ export default function GeospatialAboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-slate-950 pointer-events-none"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-10">Ready to Put Site Data to Work?</h2>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
             <Link href="/contact" className="inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-wider text-white bg-purple-600 hover:bg-purple-500 rounded-lg transition-colors">
               Request a Quote
             </Link>
             <Link href="/contact" className="inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 hover:bg-purple-500/20 rounded-lg transition-colors border border-purple-500/30">
-              Book a Call 
+              Book a Call
             </Link>
           </div>
 

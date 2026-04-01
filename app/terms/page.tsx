@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Terms of service and legal conditions for Fortune Oracle Geospatial.'
+};
+
 export default function GeospatialTermsPage() {
   return (
     <main className="pb-24">
@@ -10,7 +17,7 @@ export default function GeospatialTermsPage() {
 
       <section className="py-16 max-w-4xl mx-auto px-6">
         <div className="prose prose-invert prose-slate max-w-none space-y-8">
-          
+
           <div>
             <h2 className="text-2xl font-semibold text-white mb-4">1. Scope of Agreement</h2>
             <p className="text-slate-400 leading-relaxed">
@@ -21,7 +28,7 @@ export default function GeospatialTermsPage() {
           <div>
             <h2 className="text-2xl font-semibold text-white mb-4">2. Operations & Compliance</h2>
             <p className="text-slate-400 leading-relaxed mb-4">
-              All airborne data acquisition is conducted strictly in accordance with Federal Aviation Administration (FAA) Part 107 regulations. 
+              All airborne data acquisition is conducted strictly in accordance with Federal Aviation Administration (FAA) Part 107 regulations.
             </p>
             <ul className="list-disc list-inside text-slate-400 space-y-2">
               <li>We reserve the right to delay, abbreviate, or cancel flight operations if weather conditions, solar activity (Kp index &gt; 5), or airspace restrictions compromise safety or data integrity.</li>
@@ -32,7 +39,7 @@ export default function GeospatialTermsPage() {
           <div>
             <h2 className="text-2xl font-semibold text-white mb-4">3. Accuracy Tolerances & Liability</h2>
             <p className="text-slate-400 leading-relaxed">
-              While we deploy centimeter-grade RTK/PPK GNSS receivers and strictly calibrate our photogrammetry pipelines, all geospatial outputs (Orthomosaics, DSMs, DTMs) are provided "AS-IS". 
+              While we deploy centimeter-grade RTK/PPK GNSS receivers and strictly calibrate our photogrammetry pipelines, all geospatial outputs (Orthomosaics, DSMs, DTMs) are provided "AS-IS".
             </p>
             <p className="text-slate-400 leading-relaxed mt-4">
               <strong className="text-white">CRITICAL DISCLAIMER:</strong> Our deliverables do NOT constitute a legally binding property boundary survey. If boundary lines, legal demarcations, or title resolutions are required, the Client must contract a licensed Professional Land Surveyor (PLS) in the respective jurisdiction. Our volumetric and topographic data is strictly for engineering estimation, site planning, and progress monitoring. We assume no liability for structural deviations or financial losses resulting from the direct application of our data matrices.

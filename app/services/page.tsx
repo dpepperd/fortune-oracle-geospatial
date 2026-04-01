@@ -2,6 +2,13 @@ import { Layers, Crosshair, Map as MapIcon, Database, Video } from 'lucide-react
 import Link from 'next/link';
 import TrustCredentialStrip from '../components/TrustCredentialStrip';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Geospatial Services | Orthomosaics & 3D Modeling',
+  description: 'Explore our comprehensive drone mapping services including topographic mapping, site progression, and volumetric analysis.'
+};
+
 export default function GeospatialServicesPage() {
   const services = [
     {
@@ -25,23 +32,23 @@ export default function GeospatialServicesPage() {
       title: 'Orthomosaic Mapping',
       description: 'Distortion-free, high-resolution aerial imagery mapped directly to your project coordinate system for verifiable, up-to-date visual records.',
       icon: Layers,
-      img: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80',
+      img: '/boxxwood_optimized.jpg',
       features: ['Ground sampling distance (GSD) as fine as 1–2 cm/pixel', 'Seamless integration into GIS software', 'Time-stamped visual historical record'],
     },
     {
       id: 'inspections',
       title: 'Infrastructure & Asset Inspection',
-      description: 'High-definition visual and thermal inspections for cell towers, commercial roofing, utility corridors, and structural analysis without deploying personnel.',
+      description: 'High-definition visual inspections for cell towers, commercial roofing, utility corridors, and structural analysis without deploying personnel.',
       icon: Video,
-      img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80',
-      features: ['4K Video mapping', 'Thermal anomaly detection', 'Defect identification reporting'],
+      img: '/tower_inspection.png',
+      features: ['4K Video mapping', 'Defect identification reporting'],
     },
     {
       id: 'site-planning',
       title: 'Pre-Construction Site Analysis',
       description: 'Comprehensive data packages for developers investigating potential land acquisitions. Identify environmental constraints and topographic challenges.',
       icon: Crosshair,
-      img: 'https://images.unsplash.com/photo-1596484552834-6a58f840fd93?auto=format&fit=crop&q=80',
+      img: '/gnss_pole.jpeg',
       features: ['Boundary overlay verification', 'Existing conditions documentation', 'Early-stage feasibility support'],
     }
   ];
@@ -66,10 +73,10 @@ export default function GeospatialServicesPage() {
         <div className="space-y-16">
           {services.map((service, index) => (
             <div key={service.id} className="group overflow-hidden flex flex-col md:flex-row gap-8 items-stretch pb-16 border-b border-slate-800/50 last:border-0 last:pb-0">
-              
+
               {/* Visual Thumbnail (Left side on Desktop) */}
               <div className="w-full md:w-5/12 shrink-0 relative rounded-2xl overflow-hidden min-h-[250px] shadow-lg border border-slate-800">
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                   style={{ backgroundImage: `url(${service.img})` }}
                 />
@@ -85,7 +92,7 @@ export default function GeospatialServicesPage() {
                 <p className="text-slate-400 leading-relaxed mb-8 max-w-2xl">
                   {service.description}
                 </p>
-                
+
                 <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
                   <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
                     <span className="w-4 h-px bg-slate-700"></span>

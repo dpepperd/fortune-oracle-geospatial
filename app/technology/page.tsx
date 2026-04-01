@@ -1,6 +1,13 @@
 import { Cpu, Satellite, Target, Map, Layers, Database, Image as ImageIcon, Crosshair, ArrowRight, CheckCircle2, Navigation, FileJson, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mapping Technology | RTK Drones & Photogrammetry',
+  description: 'Discover the advanced geospatial technology, sensors, and RTK drones we use to achieve sub-centimeter accuracy for our clients.'
+};
+
 export default function GeospatialTechnologyPage() {
   const pipelineSteps = [
     { label: 'Aerial Image Capture', icon: Satellite },
@@ -15,17 +22,17 @@ export default function GeospatialTechnologyPage() {
     {
       title: 'Orthomosaic Imagery',
       desc: 'High-resolution georeferenced aerial maps used for site planning and inspection.',
-      img: 'https://images.unsplash.com/photo-1541888087405-ebcf7c186064?auto=format&fit=crop&q=80',
+      img: '/boxxwood_optimized.jpg',
     },
     {
       title: 'Terrain Models',
       desc: 'Digital Surface and Terrain Models used for grading analysis and drainage planning.',
-      img: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80',
+      img: '/contour_map.jpeg',
     },
     {
       title: 'Point Clouds & Volumes',
       desc: 'Dense 3D datasets used for stockpile measurements and construction progress tracking.',
-      img: 'https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&q=80',
+      img: '/aggregate_piles.jpeg',
     },
   ];
 
@@ -33,9 +40,9 @@ export default function GeospatialTechnologyPage() {
     <main className="pb-24">
       {/* SECTION 1 — HERO */}
       <section className="relative overflow-hidden py-32 md:py-40 border-b border-slate-800 bg-slate-950">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-screen" />
+        <div className="absolute inset-0 opacity-20 bg-[url('/contour_map.jpeg')] bg-cover bg-center mix-blend-screen" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
-        
+
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">Hardware & Analytics</h1>
           <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
@@ -57,7 +64,7 @@ export default function GeospatialTechnologyPage() {
           {/* Card 1 */}
           <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group">
             <div className="h-64 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=80')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-[url('/drone_operator.jpeg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-slate-950/40" />
             </div>
             <div className="p-8">
@@ -67,11 +74,11 @@ export default function GeospatialTechnologyPage() {
               </p>
             </div>
           </div>
-          
+
           {/* Card 2 */}
           <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group">
             <div className="h-64 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-[url('/gnss_pole.jpeg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-slate-950/40" />
             </div>
             <div className="p-8">
@@ -93,20 +100,20 @@ export default function GeospatialTechnologyPage() {
           </div>
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4 relative">
-             <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -z-10" />
-             
-             {pipelineSteps.map((step, idx) => (
-                <div key={idx} className="flex flex-col items-center flex-1 w-full relative z-10 group">
-                  <div className="w-16 h-16 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center mb-4 transition-colors group-hover:border-purple-500 shadow-xl shadow-slate-950/50">
-                    <step.icon className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <h4 className="text-sm font-bold text-white text-center px-2">{step.label}</h4>
-                  
-                  {idx < pipelineSteps.length - 1 && (
-                    <ArrowRight className="w-5 h-5 text-slate-600 lg:hidden my-4" />
-                  )}
+            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -z-10" />
+
+            {pipelineSteps.map((step, idx) => (
+              <div key={idx} className="flex flex-col items-center flex-1 w-full relative z-10 group">
+                <div className="w-16 h-16 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center mb-4 transition-colors group-hover:border-purple-500 shadow-xl shadow-slate-950/50">
+                  <step.icon className="w-6 h-6 text-purple-400" />
                 </div>
-             ))}
+                <h4 className="text-sm font-bold text-white text-center px-2">{step.label}</h4>
+
+                {idx < pipelineSteps.length - 1 && (
+                  <ArrowRight className="w-5 h-5 text-slate-600 lg:hidden my-4" />
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -129,19 +136,19 @@ export default function GeospatialTechnologyPage() {
               ))}
             </ul>
           </div>
-          
+
           <div className="lg:w-1/2 grid grid-cols-2 gap-4 w-full">
-            <div className="col-span-2 h-48 rounded-xl bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80')] bg-cover bg-center border border-slate-800 shadow-lg relative group overflow-hidden">
-               <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
-               <div className="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold text-white">Terrain Elevation Heatmap</div>
+            <div className="col-span-2 h-48 rounded-xl bg-[url('/elevation_heat_map.jpeg')] bg-cover bg-center border border-slate-800 shadow-lg relative group overflow-hidden">
+              <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
+              <div className="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold text-white">Terrain Elevation Heatmap</div>
             </div>
-            <div className="h-40 rounded-xl bg-[url('https://images.unsplash.com/photo-1541888087405-ebcf7c186064?auto=format&fit=crop&q=80')] bg-cover bg-center border border-slate-800 shadow-lg relative group overflow-hidden">
-               <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
-               <div className="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold text-white">Orthomosaic Map</div>
+            <div className="h-40 rounded-xl bg-[url('/boxxwood_optimized.jpg')] bg-cover bg-center border border-slate-800 shadow-lg relative group overflow-hidden">
+              <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
+              <div className="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold text-white">Orthomosaic Map</div>
             </div>
-            <div className="h-40 rounded-xl bg-[url('https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&q=80')] bg-cover bg-center border border-slate-800 shadow-lg relative group overflow-hidden">
-               <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
-               <div className="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold text-white">3D Point Cloud</div>
+            <div className="h-40 rounded-xl bg-[url('/digital_surface_model.jpeg')] bg-cover bg-center border border-slate-800 shadow-lg relative group overflow-hidden">
+              <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
+              <div className="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold text-white">3D Point Cloud</div>
             </div>
           </div>
         </div>
@@ -161,9 +168,9 @@ export default function GeospatialTechnologyPage() {
             {deliverables.map((del, idx) => (
               <div key={idx} className="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden group">
                 <div className="h-48 relative overflow-hidden bg-slate-800">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                    style={{ backgroundImage: `url(${del.img})` }} 
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${del.img})` }}
                   />
                   <div className="absolute inset-0 bg-slate-900/30" />
                 </div>
@@ -186,7 +193,7 @@ export default function GeospatialTechnologyPage() {
         <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">
           All flight operations and data processing workflows follow industry-standard geospatial data practices.
         </p>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: 'FAA Part 107 Certified', icon: CheckCircle2 },
@@ -194,10 +201,10 @@ export default function GeospatialTechnologyPage() {
             { label: 'NTRIP Correction Network', icon: Satellite },
             { label: 'CAD / GIS Compatible', icon: FileJson },
           ].map((badge, idx) => (
-             <div key={idx} className="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-purple-500/50 transition-colors">
-               <badge.icon className="w-8 h-8 text-purple-400" />
-               <span className="font-bold text-white text-sm">{badge.label}</span>
-             </div>
+            <div key={idx} className="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:border-purple-500/50 transition-colors">
+              <badge.icon className="w-8 h-8 text-purple-400" />
+              <span className="font-bold text-white text-sm">{badge.label}</span>
+            </div>
           ))}
         </div>
       </section>

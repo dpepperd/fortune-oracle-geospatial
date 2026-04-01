@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'Fortune Oracle Geospatial privacy policy and data collection practices.'
+};
+
 export default function GeospatialPrivacyPage() {
   return (
     <main className="pb-24">
@@ -7,10 +14,10 @@ export default function GeospatialPrivacyPage() {
           <p className="text-slate-400">Last updated: March 3, 2026</p>
         </div>
       </section>
-      
+
       <section className="py-16 max-w-4xl mx-auto px-6">
         <div className="prose prose-invert prose-slate max-w-none space-y-8">
-          
+
           <div>
             <h2 className="text-2xl font-semibold text-white mb-4">1. Introduction</h2>
             <p className="text-slate-400 leading-relaxed">

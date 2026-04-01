@@ -18,12 +18,6 @@ export default function DeliverableDashboard() {
     const orthoUrl = 'https://pub-52a1995c574f4feabfe90d167713373e.r2.dev/projects/220-bridge-project/web/southwest-section/southwest_220_bridge_ortho.jpg';
     const demUrl = 'https://pub-52a1995c574f4feabfe90d167713373e.r2.dev/projects/220-bridge-project/web/southwest-section/southwest_bridge_DEM_working.jpg';
 
-    const downloadLinks = [
-        { title: 'High-Res Orthomosaic', format: 'JPG', size: '16.8 MB', icon: MapPin },
-        { title: '3D Terrain Model', format: 'GLB', size: '920 MB', icon: FileBox },
-        { title: 'Digital Elevation Model (DEM)', format: 'JPG', size: '14 MB', icon: Layers },
-    ];
-
     return (
         <main className="min-h-screen bg-slate-950 pb-24">
             {/* Private Portal Header */}
@@ -97,27 +91,6 @@ export default function DeliverableDashboard() {
                 </div>
 
                 <hr className="border-slate-800" />
-
-                {/* Bottom Section: Downloads List */}
-                <div>
-                    <h3 className="text-xl font-bold text-white mb-6">Raw Deliverable Assets</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {downloadLinks.map((link, idx) => (
-                            <button key={idx} className="flex flex-col gap-4 p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:border-purple-500/50 transition-all group text-left">
-                                <div className="w-12 h-12 rounded-xl bg-slate-950 flex items-center justify-center border border-slate-700 group-hover:border-purple-500/30 transition-colors shadow-inner">
-                                    <link.icon className="w-5 h-5 text-purple-400 group-hover:scale-110 transition-transform" />
-                                </div>
-                                <div>
-                                    <p className="text-sm font-bold text-slate-200 mb-2">{link.title}</p>
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-[10px] font-bold tracking-widest text-purple-400 bg-purple-500/10 px-2 py-1 rounded uppercase">{link.format}</span>
-                                        <span className="text-xs text-slate-500 font-medium">{link.size}</span>
-                                    </div>
-                                </div>
-                            </button>
-                        ))}
-                    </div>
-                </div>
 
                 {/* Engineering Disclaimer */}
                 <div className="bg-amber-900/10 border border-amber-500/20 rounded-2xl p-6 mt-12 text-center md:text-left">

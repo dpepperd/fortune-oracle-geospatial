@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://fortuneoraclegeospatial.com/sitemap.xml',
+        sitemap: 'https://www.fortuneoraclegeospatial.com/sitemap.xml',
     };
 }

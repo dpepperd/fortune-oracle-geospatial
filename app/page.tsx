@@ -5,7 +5,7 @@ import TrustCredentialStrip from './components/TrustCredentialStrip';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Land Surveying & Drone Mapping | Florida',
+  title: 'Geospatial Data & Drone Mapping | Florida',
   description: 'Fortune Oracle Geospatial provides high-accuracy RTK drone mapping, 3D photogrammetry, and terrain intelligence for developers and commercial builders.'
 };
 
